@@ -1,5 +1,5 @@
 # docker-zadanie1-geoip-server-basic
-This project showcases the process of building docker image with server side application which response with client's IP and time.
+This project showcases the process of building a Docker image with a server-side application that respond with the client's IP and time.
 
 ## Table of Contents
 
@@ -19,7 +19,7 @@ For Windows systems WSL must be installed.
 
 ## Server application
 
-The code of server application with comments.
+The code of the server application with comments.
 
 ```node
 const http = require('http');
@@ -93,7 +93,7 @@ server.listen(port, host, (err) => {
 });
 ```
 
-Server app was tested on public server, because on localhost shows only local address. For testing VPN was used on British server to confirm that server working also for public responses.
+The server app was tested on a public server, because on localhost it only shows the local address. For testing, a VPN was used on a British server to confirm that the server works also for public responses.
 
 ![Client IP Public VPN](screenshots/client-ip-public-vpn.jpg)
 
@@ -101,7 +101,7 @@ Link: [render-slot-1.onrender.com](https://render-slot-1.onrender.com/)
 
 ## Dockerfile
 
-Two stage Dockerfile devided into building and running part.
+A two-stage Dockerfile divided into building and running parts.
 
 ```dockerfile
 # Stage 1: Application Building
@@ -171,7 +171,7 @@ Result:
 
 ## Container Running
 
-Run the command below to run an container. Change the '-p' parameter value to your desired ports and '--name' to your desired name of container.
+Run the command below to run an container. Change the '-p' parameter value to your desired ports and '--name' to your desired name the container.
 
 ```cmd
 docker run -d -p 3000:3000 --name ip-check-server geoip-server
@@ -183,7 +183,7 @@ Result:
 
 ## Diagnostics
 
-Checking logs of server container.
+Checking logs of the server container.
 
 ```cmd
 docker logs ip-check-server
@@ -193,7 +193,7 @@ Result:
 
 ![Logs](screenshots/logs.jpg)
 
-Checking number of image layers.
+Checking the number of image layers.
 
 ```cmd
 docker inspect --format="{{len .RootFS.Layers}}" geoip-server
@@ -203,7 +203,7 @@ Result:
 
 ![Layers](screenshots/layers.jpg)
 
-Checking if container is healthy.
+Checking if the container is healthy.
 
 ```cmd
 docker ps --filter name=ip-check-server
@@ -213,7 +213,7 @@ Result:
 
 ![Healthy](screenshots/healthy.jpg)
 
-Checking if service is working on web browser. Put 'http://localhost:3000' into search bar.
+Checking if the service is working on a web browser. Put 'http://localhost:3000' into the search bar.
 
 Result:
 
@@ -221,7 +221,7 @@ Result:
 
 ## Repository And Scouting
 
-Create repository on [hub.docker.com](https://hub.docker.com/) on your account.
+Create a repository on [dockerhub.io](https://dockerhub.io) on your account.
 
 Enroll your account.
 
@@ -249,10 +249,6 @@ Push your image to your repository.
 docker build -q -t docker.io/eyelor/zadanie1:geoip-server-basic --platform linux/amd64 --push .
 ```
 
-Result:
-
-![Basic Pushed](screenshots/basic-pushed.jpg)
-
 Now perform scout image scanning using cves showing only critical and high severities.
 
 ```cmd
@@ -263,7 +259,7 @@ Result:
 
 ![CVES Inspection](screenshots/cves-inspection.jpg)
 
-There is no critical and high severities.
+There are no critical or high severities.
 
 Link to this image: [hub.docker.com/layers/eyelor/zadanie1/geoip-server-basic/images/sha256-7c32d1136cca6b611a53eea12f8fa7c0c45b66b61c8119b7b5160d14c3abfdeb](https://hub.docker.com/layers/eyelor/zadanie1/geoip-server-basic/images/sha256-7c32d1136cca6b611a53eea12f8fa7c0c45b66b61c8119b7b5160d14c3abfdeb)
 
