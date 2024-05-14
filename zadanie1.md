@@ -9,7 +9,7 @@ This project showcases the process of building a Docker image with a server-side
 - [Image Building](#image-building)
 - [Container Running](#container-running)
 - [Diagnostics](#diagnostics)
-- [Repository And Scouting](repository-and-scouting)
+- [Repository And Scouting](#repository-and-scouting)
 
 ## Requirements
 
@@ -221,7 +221,7 @@ Result:
 
 ## Repository And Scouting
 
-Create a repository on [dockerhub.io](https://dockerhub.io) on your account.
+Create a repository on [hub.docker.com](https://hub.docker.com/) on your account.
 
 Enroll your account.
 
