@@ -221,7 +221,7 @@ Result:
 
 ## Repository And Scouting
 
-Create repository on [dockerhub.io](https://dockerhub.io) on your account.
+Create repository on [hub.docker.com](https://hub.docker.com/) on your account.
 
 Enroll your account.
 
