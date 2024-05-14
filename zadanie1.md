@@ -249,6 +249,10 @@ Push your image to your repository.
 docker build -q -t docker.io/eyelor/zadanie1:geoip-server-basic --platform linux/amd64 --push .
 ```
 
+Result:
+
+![Basic Pushed](screenshots/basic-pushed.jpg)
+
 Now perform scout image scanning using cves showing only critical and high severities.
 
 ```cmd
